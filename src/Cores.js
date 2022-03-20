@@ -1,7 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Cores = () => {
   const [cor, setCor] = useState('black');
+
+  useEffect(() => {
+    const mudarCorNoClique = () => {
+      if (cor === 'black') {
+        setCor('purple');
+      } else {
+        setCor('black');
+      }
+    };
+  });
 
   return (
     <div>
