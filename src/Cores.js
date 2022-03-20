@@ -11,7 +11,13 @@ const Cores = () => {
         setCor('black');
       }
     };
-  });
+
+    document.addEventListener('click', mudarCorNoClique);
+
+    return () => {
+      document.removeEventListener('click', mudarCorNoClique);
+    };
+  }, [cor]);
 
   return (
     <div>
