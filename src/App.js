@@ -8,6 +8,7 @@ function App() {
     <>
       <h1>React hooks</h1>
       <h2>Contador: {contador}</h2>
+      <button onClick={incrementarContador}>+</button>
     </>
   );
 }
